@@ -1,4 +1,6 @@
 .idea
+.ipr
+.iws
 .classpath
 .project
 *.iml
@@ -6,9 +8,6 @@
 target
 *.log
 *.log.*
-/javashop/b2c/src/main/webapp/config/*.properties
-/javashop/b2c/src/main/webapp/install/install.lock
-/javashop/b2c/overlays/*
 .classpath
 .project
 .settings
@@ -46,3 +45,4 @@ target
 Icon?
 ehthumbs.db
 Thumbs.db
+/.ideaDataSources

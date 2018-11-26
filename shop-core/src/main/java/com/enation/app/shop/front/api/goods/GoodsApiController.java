@@ -108,8 +108,7 @@ public class GoodsApiController  extends GridController {
 	
 	/**
 	 * 商品预览
-	 * @param sn
-	 * @param goodsid
+	 * @param goodsId
 	 * @return
 	 */
 	@ResponseBody
@@ -138,6 +137,7 @@ public class GoodsApiController  extends GridController {
 	 * 货品快照列表
 	 * @param goodsid 商品Id
 	 * @param snapshotid 快照id
+	 * @param product_id 产品id
 	 * @return
 	 */
 	@ResponseBody

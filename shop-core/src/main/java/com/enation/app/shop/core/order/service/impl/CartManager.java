@@ -2,6 +2,7 @@ package com.enation.app.shop.core.order.service.impl;
 
 import java.util.List;
 
+import com.enation.framework.util.JsonUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -275,6 +276,7 @@ public class CartManager implements ICartManager {
 		}else{
 			sql.append(" and c.member_id=?");
 			list = this.daoSupport.queryForList(sql.toString(), new CartItemMapper(), member.getMember_id());
+            System.out.println(JsonUtil.ListToJson(list));
 		}
 	
 		//循环判断购物车中的货品是否参加了促销活动，如果参加了促销活动，判断促销活动是否已结束或已失效，如果已结束或已失效，就将此购物项中的促销活动id置为空

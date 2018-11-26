@@ -6,6 +6,7 @@ import com.enation.framework.database.IDaoSupport;
 import com.enation.framework.database.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @email: 1126457667@qq.com
  */
 @Service
+@Transactional
 public class RepairManager implements IRepairManager {
 
     @Autowired

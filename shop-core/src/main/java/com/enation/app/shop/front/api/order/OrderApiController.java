@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.enation.framework.util.JsonUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -341,6 +342,7 @@ public class OrderApiController {
 		}
 
 		String sessionid =request.getSession().getId();
+		logger.info("购物车的sessionid------>" + sessionid);
 		List<CartItem> itemList  = this.cartManager.selectListGoods(sessionid);
 		if(itemList==null||itemList.size()==0){
 			throw new RuntimeException("购物车不能为空");
@@ -395,7 +397,8 @@ public class OrderApiController {
 				}
 			} 
 		}
-		
+		// 查看购物车物品
+		System.out.println(this.getClass().getName() + ":"+ JsonUtil.ListToJson(itemList));
 		return	this.orderFlowManager.add(order,itemList,sessionid);
 		
 	}

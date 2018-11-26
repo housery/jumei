@@ -263,6 +263,7 @@ public class CartItem implements Serializable{
 	public void setExchange(String string) {
 		this.exchange = string;
 	}
+
 	@NotDbField
 	public Integer getSnapshot_id() {
 		return snapshot_id;

@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.enation.framework.util.JsonUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,7 +97,7 @@ public class JdbcDaoSupport implements IDaoSupport {
 			if (table.equals("es_settings")) {
 				// jdbcTemplate.update("set identity_insert es_settings off");
 			}
-
+			logger.info(JsonUtil.ObjectToJson(values));
 			jdbcTemplate.update(sql, values);
 		} catch (Exception e) {
 			// e.printStackTrace();
@@ -477,7 +478,7 @@ public class JdbcDaoSupport implements IDaoSupport {
 	/**
 	 * 去除sql的select 子句，未考虑union的情况,用于pagedQuery.
 	 * 
-	 * @see #pagedQuery(String,int,int,Object[])
+	 * @see #(String,int,int,Object[])
 	 */
 	private String removeSelect(String sql) {
 		// 不明白之前的修改什么意思，还原包含group by的sql处理
@@ -511,7 +512,7 @@ public class JdbcDaoSupport implements IDaoSupport {
 	/**
 	 * 去除hql的orderby 子句，用于pagedQuery.
 	 * 
-	 * @see #pagedQuery(String,int,int,Object[])
+	 * @see #(String,int,int,Object[])
 	 */
 	private String removeOrders(String hql) {
 		Assert.hasText(hql);

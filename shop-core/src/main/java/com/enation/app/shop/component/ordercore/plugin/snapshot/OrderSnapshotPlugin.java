@@ -3,6 +3,10 @@ package com.enation.app.shop.component.ordercore.plugin.snapshot;
 import java.util.List;
 import java.util.Map;
 
+import com.enation.framework.action.JsonResult;
+import com.enation.framework.util.JsonMessageUtil;
+import com.enation.framework.util.JsonResultUtil;
+import com.enation.framework.util.JsonUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -44,8 +48,10 @@ public class OrderSnapshotPlugin extends AutoRegisterPlugin implements IBeforeOr
 	 */
 	@Override
 	public void onBeforeOrderCreate(Order order, List<CartItem> itemList, String sessionid) {
+
 		//遍历购物车，将购物车内的商品存入快照表
 		for (CartItem cartItem : itemList) {
+			logger.debug(JsonUtil.ObjectToJson(cartItem));
 			//查询快照表中是否有快照商品
 			String sql = "select * from es_goods_snapshot where goods_id=?";
 			List list = daoSupport.queryForList(sql, cartItem.getGoods_id());
@@ -54,6 +60,8 @@ public class OrderSnapshotPlugin extends AutoRegisterPlugin implements IBeforeOr
 			GoodsSnapshot goodsSnapshot = daoSupport.queryForObject(sql, GoodsSnapshot.class, cartItem.getGoods_id());
 			//判断快照表中是否存在当前商品的快照，不存在则创建快照
 			if(list.size()==0){
+                // 购物车物品转换为快照
+                this.logger.info("--->"+ JsonUtil.ListToJson(itemList));
 				this.addSnapshotData(goodsSnapshot, cartItem);
 			}else{
 				//如果存在，相同商品可能存在多个快照表，获取最新的快照表
@@ -68,6 +76,9 @@ public class OrderSnapshotPlugin extends AutoRegisterPlugin implements IBeforeOr
 			} 
 		}
 	}
+
+
+	// 购物车商品转换快照出现结果集不一致
 	private void addSnapshotData(GoodsSnapshot goodsSnapshot,CartItem cartItem){
 		goodsSnapshot.setEdit_time(DateUtil.getDateline());
 		//将快照数据添加到数据库
@@ -76,10 +87,11 @@ public class OrderSnapshotPlugin extends AutoRegisterPlugin implements IBeforeOr
 		Integer snapshot_id = daoSupport.queryForInt(sql, null);
 		cartItem.setSnapshot_id(snapshot_id);
 		//将货品快照数据添加到数据库
-		sql = "select * from es_product where goods_id=? ";
-		List<ProductSnapshot> products = daoSupport.queryForList(sql,ProductSnapshot.class,cartItem.getGoods_id());
+		sql = "select * from es_product where goods_id=? and product_id =? ";
+		List<ProductSnapshot> products = daoSupport.queryForList(sql,ProductSnapshot.class,cartItem.getGoods_id(),cartItem.getProduct_id());
 		for (ProductSnapshot productSnapshot : products) {
 			productSnapshot.setSnapshot_id(snapshot_id);
+            this.logger.info(productSnapshot.getProduct_id());
 			productSnapshotManager.add(productSnapshot);
 		}
 		//查询商品图片信息表，将图片信息存入快照图片表

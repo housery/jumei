@@ -1,6 +1,6 @@
 .idea
-.ipr
-.iws
+*.ipr
+*.iws
 .classpath
 .project
 *.iml

@@ -332,7 +332,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/pom.xml" />
-        <option value="$PROJECT_DIR$/weixin/pom.xml" />
       </list>
     </option>
   </component>

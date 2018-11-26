@@ -1,56 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="b2c:war exploded" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="bdcc247d-f072-4a6d-a965-9262f7f0eb4d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/b2c/src/main/resources/log4J.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b2c/src/main/test/RepairManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b2c/src/main/test/TestTemplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/前端接口.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/开发问题.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2c/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/log4Junit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/log4Junit.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/enation/framework/database/impl/JdbcDaoSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/enation/framework/database/impl/JdbcDaoSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javashop-parent.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/javashop-parent.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javashop-parent.iws" beforeDir="false" afterPath="$PROJECT_DIR$/javashop-parent.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/service/impl/ProductSnapshotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/service/impl/ProductSnapshotManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/model/support/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/model/support/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/plugin/order/OrderPluginBundle.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/plugin/order/OrderPluginBundle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/CartManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/OrderFlowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/OrderFlowManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/goods/GoodsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/goods/GoodsApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/order/OrderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/order/OrderApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/other/RepairApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/other/RepairApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javashop-parent.iws" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/groupbuy/target/" />
-    <ignored path="$PROJECT_DIR$/core/target/" />
-    <ignored path="$PROJECT_DIR$/b2c/target/" />
-    <ignored path="$PROJECT_DIR$/zt-sms/target/" />
     <ignored path="$PROJECT_DIR$/weixin/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/weixin-applet/target/" />
-    <ignored path="$PROJECT_DIR$/cms-core/target/" />
-    <ignored path="$PROJECT_DIR$/shop-core/target/" />
-    <ignored path="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -63,58 +25,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="es_cart: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="es_goods_snapshot: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="es_member: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="es_product_snapshot: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="es_showcase: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ErrorTreeViewConfiguration">
@@ -131,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="470">
-              <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -145,36 +56,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderSnapshotPlugin.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderSnapshotPlugin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="89" column="73" lean-forward="true" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+            <state relative-caret-position="438">
+              <caret line="89" column="73" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="54">
+              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Arquillian JUnit Test Class" />
-        <option value="FxmlFile" />
-        <option value="JUnit4 Test Class" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -223,57 +123,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsGalleryTag.java" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/goods_list.html" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/classify.html" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/model/support/GoodsPo.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsGalleryNewTag.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/model/support/GoodsParamList.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/model/GoodsVo.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsGalleryBestSellerTag.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/service/impl/GoodsManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/service/IGoodsManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/snapshot/GoodsViewCountTag.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsViewCountTag.java" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/goods.html" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/css/classify.css" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/utils/SortContainer.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/webapp/themes/kaben/checkout/address-add.html" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/js/address-add-edit.js" />
-        <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/member/address-add.html" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/b2c/src/main/webapp/config/jdbc.properties" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManagerTest.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/test/com/enation/app/shop/core/other/service/impl/RepairManagerTest.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/test/RepairManagerTest.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/test/RepairManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/test/RepairManagerT.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/webapp/core/admin/site/css/admin.css" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/other/RepairApiController.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" />
-        <option value="$PROJECT_DIR$/doc/开发问题.md" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/service/impl/ProductSnapshotManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/CartManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/test/com/enation/app/shop/core/other/controller/RepairControllerTest.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/test/RepairControllerTest.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/test/TestTemplete.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/test/RepairManagerTest.java" />
-        <option value="$PROJECT_DIR$/doc/前端接口.md" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/goods/GoodsApiController.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/decorate/ShowCaseApiController.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/enation/framework/database/impl/JdbcDaoSupport.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/order/OrderApiController.java" />
-        <option value="$PROJECT_DIR$/b2c/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/service/impl/OrderFlowManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/plugin/order/OrderPluginBundle.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/order/model/support/CartItem.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/23cf5934-97d1-4af0-bdf0-55a7eb808902/console.sql" />
-        <option value="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" />
       </list>
     </option>
   </component>
@@ -290,33 +140,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="F:/Program Files/apache-maven-3.5.4" />
-        <option name="userSettingsFile" value="F:\Program Files\apache-maven-3.5.4\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="119" />
-    <option name="y" value="97" />
-    <option name="width" value="1767" />
-    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -334,32 +159,6 @@
               <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="javashop" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="b2c" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="b2c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="b2c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="b2c" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -368,50 +167,6 @@
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="address-add-edit.js&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/js/page/address-add-edit.js&#10;order.html&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/member/order.html&#10;RegionSelectDirective&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.goods.other.regions.RegionSelectDirective&#10;address-add&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/kaben/checkout/address-add.html&#10;goodsSearchTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.goods.GoodsSearchTag&#10;searchSelectorTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.goods.search.SearchSelectorTag&#10;footprintTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.member.FootprintTag&#10;footprints&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/member/footprints.html&#10;goodsGalleryBestSellerTag&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsGalleryBestSellerTag.java&#10;memberIsCommentTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.member.MemberIsCommentTag&#10;comment.html&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/comment.html&#10;comment.htm&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/docs/api/comment.html&#10;goodsGalleryNewTag&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/shop-core/src/main/java/com/enation/app/shop/front/tag/goods/GoodsGalleryNewTag.java&#10;checkCmptIsOnTag&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/core/src/main/java/com/enation/app/base/core/tag/CheckCmptIsOnTag.java&#10;goodsCatTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.goods.GoodsCatTag&#10;goodsGalleryTag&#9;PSI&#9;JAVA://com.enation.app.shop.front.tag.goods.GoodsGalleryTag&#10;goods_list.html&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/goods_list.html&#10;search.html&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/search.html&#10;float_footer&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/common/float_footer.html&#10;class&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/classify.html&#10;classify.&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/js/classify.js&#10;cat_edit&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/shop/admin/cat/cat_edit.html&#10;classify.html&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/classify.html&#10;common.js&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/js/common.js&#10;classify&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/themes/wap/js/classify.js&#10;iscroll&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/statics/e_tools/mobile/library/iscroll/iscroll.js&#10;classify.css&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/css/classify.css&#10;classify.h&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/classify.html&#10;category&#9;FILE&#9;file://E:/work4/shop_b2c_weixin/javashop-b2c-weixin-applet/themes/src/main/webapp/themes/yanxuan/category.html&#10;iscroll.js&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/statics/e_tools/mobile/library/iscroll/iscroll.js&#10;goods.html&#9;FILE&#9;file://E:/work4/shopB2CNew/Javashop-B2C/javashop/b2c/src/main/webapp/docs/api/goods.html" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="database.console.LAST_STATE" value="false" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/weixin/pom.xml" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.enation.app.shop.core.other.controller" />
-      <recent name="com.enation.app.shop.core.other.service.impl" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\work\enation-Javashop-B2C-liuyulei\Javashop-B2C\javashop\b2c\src\main\resources" />
-      <recent name="E:\work\enation-Javashop-B2C-liuyulei\Javashop-B2C\javashop" />
-      <recent name="E:\work4\shop_b2c_weixin\javashop-b2c-weixin-applet\themes\src\main\webapp\themes\yanxuan\js" />
-      <recent name="E:\work4\shopB2CNew\Javashop-B2C\javashop\b2c\src\main\webapp\install" />
-      <recent name="E:\work4\shop_b2c_weixin\javashop-b2c-weixin-applet\themes\src\main\webapp\themes\yanxuan\images" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="com.enation.app.shop.front.api.other" />
-      <recent name="com.enation.app.shop.core.other.service.test" />
-      <recent name="com.enation.app.shop.front.tag.goods.snapshot" />
-      <recent name="com.enation.app.shop.core.goods.model.support" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\work\enation-Javashop-B2C-liuyulei\Javashop-B2C\javashop\b2c\src\main\resources" />
-      <recent name="E:\work\enation-Javashop-B2C-liuyulei\Javashop-B2C\javashop\b2c\src\main\resources\spring_cfg" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -556,6 +311,16 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="core" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -732,7 +497,7 @@
       <workItem from="1542852305963" duration="9548000" />
       <workItem from="1542937630627" duration="14252000" />
       <workItem from="1543194974262" duration="2276000" />
-      <workItem from="1543200414067" duration="16711000" />
+      <workItem from="1543200414067" duration="17442000" />
     </task>
     <task id="LOCAL-00001" summary="添加Repair的Controller">
       <created>1542711589928</created>
@@ -748,52 +513,10 @@
       <option name="project" value="LOCAL" />
       <updated>1543217977381</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="RepairManagerTest_getRepairByMemberIDStatus - 2018.11.20 at 13h 18m 12s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDStatus" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairManagerTest_getRepairByMemberIDStatus - 2018.11.20 at 13h 18m 55s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDStatus" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairManagerTest_getRepairByMemberIDStatus - 2018.11.20 at 13h 27m 02s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDStatus" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairManagerTest_getRepairByMemberIDStatus_(1) - 2018.11.20 at 13h 31m 30s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDStatus (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairControllerTest_getRepairByMemberID - 2018.11.21 at 20h 55m 42s.xml">
-      <configuration name="RepairControllerTest.getRepairByMemberID" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairControllerTest_getRepairByMemberID_(1) - 2018.11.21 at 20h 58m 40s.xml">
-      <configuration name="RepairControllerTest.getRepairByMemberID (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTemplete_test - 2018.11.21 at 21h 04m 52s.xml">
-      <configuration name="TestTemplete.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTemplete_test - 2018.11.21 at 21h 06m 43s.xml">
-      <configuration name="TestTemplete.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairManagerTest_getRepairByMemberIDTest - 2018.11.21 at 21h 16m 06s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RepairManagerTest_getRepairByMemberIDTest - 2018.11.21 at 21h 18m 52s.xml">
-      <configuration name="RepairManagerTest.getRepairByMemberIDTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237032000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="51000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -817,11 +540,10 @@
       <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3033586" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3033586" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Spring" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.24377032" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.496112" visible="true" weight="0.22547974" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32942432" />
       <window_info id="Web" order="6" sideWeight="0.5088161" side_tool="true" weight="0.22087745" />
@@ -832,35 +554,38 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="SQL Generator" order="16" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.24377032" />
       <window_info anchor="right" id="Properties" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加Repair的Controller" />
-    <MESSAGE value="修复带有型号规格的商品添加订单失败" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复带有型号规格的商品添加订单失败" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/member/MemberAddressApiController.java</url>
-          <line>472</line>
-          <properties />
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="63" />
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="ZooKeeperConfig">
     <option name="host" value="" />
@@ -868,18 +593,7 @@
     <option name="charset" value="UTF-8" />
     <option name="whitePaths" value="" />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/decorate/ShowCaseApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/goods/GoodsApiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1159,20 +873,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/ApplicationContext-mq.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/dataAccessContext-jdbc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/log4Junit.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/javashop-parent.iml">
@@ -1198,7 +902,7 @@
     <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
-          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1209,90 +913,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="89" column="73" lean-forward="true" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+    <entry file="file://$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/log4Junit.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>b2c:war</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>b2c</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/component/ordercore/plugin/snapshot/OrderSnapshotPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="89" column="73" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -119,7 +119,7 @@ public class FindPasswordController {
 	 * 检查用户输入的验证码
 	 * 需要传入mobileNum一个参数
 	 * 
-	 * @param mobileNum 验证码,String型
+	 * @param mobileNum 手机号码
 	 *  
 	 * @return 返回json串
 	 * result  为1表示调用成功0表示失败 ，int型
@@ -127,14 +127,14 @@ public class FindPasswordController {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/check-sms-code",produces = MediaType.APPLICATION_JSON_VALUE)
-	public JsonResult checkSmsCode(String mobileNum, String validcode ,String validcodes) {
+	public JsonResult checkSmsCode(String mobileNum, String validcode) {
 		try {
-			//图片验证码
+			/*//图片验证码
 			if(!"".equals(validcodes)||validcodes!=null){
 				if(this.validcode(validcodes,"memberlogin") == 0){
 					return JsonResultUtil.getErrorJson("图片验证码错误！");
 				}
-			}
+			}*/
 
 			HttpServletRequest request = ThreadContextHolder.getHttpRequest();
 //			String code = (String)request.getSession().getAttribute("smscode");
@@ -161,7 +161,7 @@ public class FindPasswordController {
 	 * 验证通过后重置密码
 	 * 需要传入mobileNum一个参数
 	 * 
-	 * @param mobileNum 新密码,String型
+	 * @param password 新密码,String型
 	 * 
 	 * @return 返回json串
 	 * result  为1表示调用成功0表示失败 ，int型

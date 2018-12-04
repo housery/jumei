@@ -607,13 +607,8 @@ public class MemberApiController  {
 	 */
 	@ResponseBody
 	@RequestMapping(value="/reg-mobile",produces = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.POST)
-	public JsonResult regMobile(String license, String email, String username,String nickname,
-                                String password, String mobile,String smsCode){
-
-	    // 验证短信验证码
-        if (!SmsUtil.validSmsCode(smsCode, mobile, SmsTypeKeyEnum.REGISTER.toString())) {
-            return JsonResultUtil.getErrorJson("短信验证码错误");
-        }
+	public JsonResult regMobile(String license, String email, String username,
+                                String password, String mobile){
 		
         // 验证手机号
 		if(this.memberManager.checkMobile(mobile)==1){
@@ -639,14 +634,6 @@ public class MemberApiController  {
             return JsonResultUtil.getErrorJson("用户名中不能包含@等特殊字符！");
         }
 
-        // 验证昵称
-        if (nickname.length() < 4 || nickname.length() > 20) {
-            return JsonResultUtil.getErrorJson("用户名的长度为4-20个字符！");
-        }
-        if (nickname.contains("@")) {
-            return JsonResultUtil.getErrorJson("用户名中不能包含@等特殊字符！");
-        }
-
         // 验证邮箱
         if (StringUtil.isEmpty(email)) {
 			return JsonResultUtil.getErrorJson("注册邮箱不能为空！");
@@ -663,7 +650,6 @@ public class MemberApiController  {
 		member.setMobile(mobile);
 		member.setUname(username);
 		member.setName(username);       //会员的uname及name分不清楚，暂时这2个字段在注册的时候使用同一个值
-        member.setNickname(nickname);
 		member.setPassword(password);
 		member.setEmail(email);
 		member.setRegisterip(registerip);

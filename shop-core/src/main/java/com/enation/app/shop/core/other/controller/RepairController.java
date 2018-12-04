@@ -1,24 +1,32 @@
 package com.enation.app.shop.core.other.controller;
 
+import com.enation.app.base.core.model.Member;
 import com.enation.app.base.core.upload.IUploader;
 import com.enation.app.base.core.upload.UploadFacatory;
 import com.enation.app.shop.core.other.model.Repair;
 import com.enation.app.shop.core.other.service.impl.RepairManager;
+import com.enation.eop.sdk.context.UserConext;
 import com.enation.framework.action.GridController;
 import com.enation.framework.action.GridJsonResult;
 import com.enation.framework.action.JsonResult;
+import com.enation.framework.context.webcontext.ThreadContextHolder;
 import com.enation.framework.database.Page;
 import com.enation.framework.util.FileUtil;
 import com.enation.framework.util.JsonMessageUtil;
 import com.enation.framework.util.JsonResultUtil;
 import com.enation.framework.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpSession;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -36,16 +44,17 @@ public class RepairController extends GridController {
     private RepairManager repairManager;
 
     /**
-     * 根据会员id和状态获取维修订单
-     * @param member_id id
+     * 根据订单处理状态获取维修订单
      * @param status 状态
      * @return json格式列表
      */
     @ResponseBody
-    @RequestMapping(value = "/getRepair",produces = MediaType.APPLICATION_JSON_VALUE)
-    public GridJsonResult getRepairByMemberIdStatus(int member_id, int status){
+    @RequestMapping(value = "/getRepairByStatus",produces = MediaType.APPLICATION_JSON_VALUE)
+    public GridJsonResult getRepairByMemberIdStatus(int status){
         Page repairList = null;
         try {
+            Member member = UserConext.getCurrentMember();
+            int member_id = member.getMember_id();
             repairList = repairManager.getRepairByMemberIDStatus(member_id, status, this.getPage(), this.getPageSize());
         } catch (Exception e) {
             e.printStackTrace();
@@ -54,15 +63,16 @@ public class RepairController extends GridController {
     }
 
     /**
-     * 根据会员id获取维修订单列表,分页显示
-     * @param member_id id
+     * 获取当前登陆用户的所有维修订单,分页显示
      * @return json格式列表
      */
     @ResponseBody
-    @RequestMapping(value = "/getRepairByMemberId",produces = MediaType.APPLICATION_JSON_VALUE)
-    public GridJsonResult getRepairByMemberID(int member_id){
+    @RequestMapping(value = "/getRepairByMember",produces = MediaType.APPLICATION_JSON_VALUE)
+    public GridJsonResult getRepairByMember(){
         Page repairList = null;
         try {
+            Member member = UserConext.getCurrentMember();
+            int member_id = member.getMember_id();
             repairList = repairManager.getRepairByMemberID(member_id, this.getPage(), this.getPageSize());
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,12 +102,11 @@ public class RepairController extends GridController {
     @RequestMapping(value = "/deleteRepairById",produces = MediaType.APPLICATION_JSON_VALUE)
     public String deleteRepairByID(Integer repair_id){
         try {
-            repairManager.deleteRepairByID(repair_id);
             // 删除图片
             Repair repair = repairManager.getRepair(repair_id);
-            String imgPath1 = repair.getImg1();
-            String imgPath2 = repair.getImg2();
-            String imgPath3 = repair.getImg3();
+            String imgPath1 = repair.getImg_1();
+            String imgPath2 = repair.getImg_2();
+            String imgPath3 = repair.getImg_3();
 
             IUploader uploader=UploadFacatory.getUploaer();
             try { // 判断图片并删除
@@ -114,6 +123,7 @@ public class RepairController extends GridController {
                 e.printStackTrace();
                 return JsonMessageUtil.getErrorJson("删除维修订单下的图片失败");
             }
+            repairManager.deleteRepairByID(repair_id);
             return JsonMessageUtil.getSuccessJson("删除维修订单成功");
         } catch (Exception e) {
             e.printStackTrace();
@@ -122,8 +132,8 @@ public class RepairController extends GridController {
     }
 
     /**
-     * 编辑维修订单，
-     * 默认设置更新时间，设置状态为待处理1，只有status=1时候才可以编辑
+     * 编辑维修订单，只允许客户修改订单
+     * 默认设置更新时间，设置状态为待处理1,
      * @param repair
      * @param imgPath1
      * @param imgPath2
@@ -137,19 +147,20 @@ public class RepairController extends GridController {
                              @RequestParam(value = "imgPath2", required = false) String imgPath2,
                              @RequestParam(value = "imgPath3", required = false) String imgPath3){
         try {
-            if (repair.getRepairType() == 1){ // 维修类型为1公修
+            if (repair.getRepair_type() == 1){ // 维修类型为1公修
                 repair.setPaymoney(0.00);  // 公共维修则支付为0
             }
             if (!StringUtil.isEmpty(imgPath1)){
-                repair.setImg1(imgPath1);
+                repair.setImg_1(imgPath1);
             }
             if (!StringUtil.isEmpty(imgPath2)){
-                repair.setImg2(imgPath2);
+                repair.setImg_2(imgPath2);
             }
             if (!StringUtil.isEmpty(imgPath3)){
-                repair.setImg3(imgPath3);
+                repair.setImg_3(imgPath3);
             }
-            repair.setUpdateDate(new Date());
+            long updateTime = System.currentTimeMillis();
+            repair.setUpdate_date(updateTime);
             repair.setStatus(1);
             repairManager.editRepair(repair);
             return JsonMessageUtil.getSuccessJson("编辑维修订单成功");
@@ -172,25 +183,69 @@ public class RepairController extends GridController {
                                 @RequestParam(value = "imgPath2", required = false) String imgPath2,
                                 @RequestParam(value = "imgPath3", required = false) String imgPath3){
         try {
-            if (repair.getRepairType() == 1){ // 维修类型为1公修
+            Member member = UserConext.getCurrentMember();
+
+            if (repair.getRepair_type() == 1){ // 维修类型为1公修
                 repair.setPaymoney(0.00);  // 公共维修则支付为0
             }
+            if ("".equals(repair.getPaymoney())){
+                repair.setPaymoney(0.00);
+            }
             if (!StringUtil.isEmpty(imgPath1)){
-                repair.setImg1(imgPath1);
+                repair.setImg_1(imgPath1);
             }
             if (!StringUtil.isEmpty(imgPath2)){
-                repair.setImg2(imgPath2);
+                repair.setImg_2(imgPath2);
             }
             if (!StringUtil.isEmpty(imgPath3)){
-                repair.setImg3(imgPath3);
+                repair.setImg_3(imgPath3);
             }
-            repair.setUpdateDate(new Date());
+            repair.setUpdate_date(System.currentTimeMillis());
             repair.setStatus(1);
+            repair.setMember_id(member.getMember_id());
             repairManager.addRepair(repair);
             return JsonResultUtil.getSuccessJson("添加维修订单成功");
         } catch (Exception e) {
             e.printStackTrace();
             return JsonResultUtil.getErrorJson("添加维修订单失败 "+ e.getMessage());
         }
+    }
+
+    /**
+     * 根据维修的支付状态获取当前登陆会员的维修订单
+     * @param payment_status 支付状态 0未支付 1已经支付
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/getRepairByPayStatus")
+    public GridJsonResult getRepairByPayStatus(int payment_status){
+        Page repairList = null;
+        try {
+            Member member = UserConext.getCurrentMember();
+            int member_id = member.getMember_id();
+            repairList = repairManager.getRepairByPayStatus(member_id, payment_status, this.getPage(), this.getPageSize());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return JsonResultUtil.getGridJson(repairList);
+    }
+
+    /**
+     * 根据订单评论状态获取订单
+     * @param comment_status 评论状态 0未评论 1已经评论 默认0
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/getRepairByCommentStatus")
+    public GridJsonResult getRepairByCommentStatus(int comment_status){
+        Page repairList = null;
+        try {
+            Member member = UserConext.getCurrentMember();
+            int member_id = member.getMember_id();
+            repairList = repairManager.getRepairByCommentStatus(member_id, comment_status, this.getPage(), this.getPageSize());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return JsonResultUtil.getGridJson(repairList);
     }
 }

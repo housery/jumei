@@ -51,4 +51,24 @@ public interface IRepairManager {
      * @return
      */
     public Page getRepairByMemberIDStatus(Integer member_id, Integer status,int pageNo, int pageSize);
+
+    /**
+     * 根据支付状态获取会员的维修订单
+     * @param member_id
+     * @param payment_status
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    public Page getRepairByPayStatus(Integer member_id, Integer payment_status, int pageNo, int pageSize);
+
+    /**
+     * 根据评论状态获取会员维修订单
+     * @param member_id
+     * @param comment_status
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    public Page getRepairByCommentStatus(Integer member_id, Integer comment_status, int pageNo, int pageSize);
 }

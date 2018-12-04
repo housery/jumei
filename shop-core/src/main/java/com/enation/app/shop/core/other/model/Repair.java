@@ -1,7 +1,10 @@
 package com.enation.app.shop.core.other.model;
 
 import com.enation.framework.database.PrimaryKeyField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Past;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,31 +13,34 @@ public class Repair implements Serializable {
     private Integer id;
 
     // 维修类型 1公共维修，2私人报修
-    private Integer repairType;
+    private Integer repair_type;
 
-    // 报修类型
+    // 报修类目
     private String category;
 
     // 报修标题
     private String title;
 
-    // 报修标题
+    // 报修内容
     private String content;
 
     // 报修图片路径1，2，3 第一个图片为非空
-    private String img1;
-    private String img2;
-    private String img3;
+    private String img_1;
+    private String img_2;
+    private String img_3;
     private String address;
 
     // 报修更新时间
-    private Date updateDate;
+    private long update_date;
 
     // 报修预约时间
-    private Date scheduledDate;
+    private long scheduled_date;
 
     // 支付金额，只有repairType=2（私人报修）才会有支付金额
     private Double paymoney;
+
+    // 支付状态
+    private Double payment_status;
 
     // 会员id
     private Integer member_id;
@@ -44,6 +50,9 @@ public class Repair implements Serializable {
 
     // 维修评论
     private String comment;
+
+    // 维修评论状态
+    private int comment_status;
 
     // 主键
     @PrimaryKeyField
@@ -55,15 +64,13 @@ public class Repair implements Serializable {
         this.id = id;
     }
 
-
-    public Integer getRepairType() {
-        return repairType;
+    public Integer getRepair_type() {
+        return repair_type;
     }
 
-    public void setRepairType(Integer repairType) {
-        this.repairType = repairType;
+    public void setRepair_type(Integer repair_type) {
+        this.repair_type = repair_type;
     }
-
 
     public String getCategory() {
         return category;
@@ -73,7 +80,6 @@ public class Repair implements Serializable {
         this.category = category;
     }
 
-
     public String getTitle() {
         return title;
     }
@@ -81,7 +87,6 @@ public class Repair implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
-
 
     public String getContent() {
         return content;
@@ -91,33 +96,29 @@ public class Repair implements Serializable {
         this.content = content;
     }
 
-
-    public String getImg1() {
-        return img1;
+    public String getImg_1() {
+        return img_1;
     }
 
-    public void setImg1(String img1) {
-        this.img1 = img1;
+    public void setImg_1(String img_1) {
+        this.img_1 = img_1;
     }
 
-
-    public String getImg2() {
-        return img2;
+    public String getImg_2() {
+        return img_2;
     }
 
-    public void setImg2(String img2) {
-        this.img2 = img2;
+    public void setImg_2(String img_2) {
+        this.img_2 = img_2;
     }
 
-
-    public String getImg3() {
-        return img3;
+    public String getImg_3() {
+        return img_3;
     }
 
-    public void setImg3(String img3) {
-        this.img3 = img3;
+    public void setImg_3(String img_3) {
+        this.img_3 = img_3;
     }
-
 
     public String getAddress() {
         return address;
@@ -127,30 +128,27 @@ public class Repair implements Serializable {
         this.address = address;
     }
 
-
-    public Date getUpdateDate() {
-        return updateDate;
+    public long getUpdate_date() {
+        return update_date;
     }
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
+    public void setUpdate_date(long update_date) {
+        this.update_date = update_date;
     }
 
-
-    public Date getScheduledDate() {
-        return scheduledDate;
+    public long getScheduled_date() {
+        return scheduled_date;
     }
 
-    public void setScheduledDate(Date scheduledDate) {
-        this.scheduledDate = scheduledDate;
+    public void setScheduled_date(long scheduled_date) {
+        this.scheduled_date = scheduled_date;
     }
 
-
-    public double getPaymoney() {
+    public Double getPaymoney() {
         return paymoney;
     }
 
-    public void setPaymoney(double paymoney) {
+    public void setPaymoney(Double paymoney) {
         this.paymoney = paymoney;
     }
 
@@ -176,5 +174,21 @@ public class Repair implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Double getPayment_status() {
+        return payment_status;
+    }
+
+    public void setPayment_status(Double payment_status) {
+        this.payment_status = payment_status;
+    }
+
+    public int getComment_status() {
+        return comment_status;
+    }
+
+    public void setComment_status(int comment_status) {
+        this.comment_status = comment_status;
     }
 }

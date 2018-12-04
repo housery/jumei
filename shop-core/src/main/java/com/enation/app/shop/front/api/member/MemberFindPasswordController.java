@@ -114,7 +114,7 @@ public class MemberFindPasswordController {
 			return JsonResultUtil.getErrorJson("验证字串不正确,请重新找回");				
 		}
 		if(member.getFind_code()==null||"".equals(member.getFind_code())||member.getFind_code().length()!=10){
-			return JsonResultUtil.getErrorJson("地址已经过期,请重新找回");				
+			return JsonResultUtil.getErrorJson(",请地址已经过期重新找回");
 		}
 		int time = Integer.parseInt(member.getFind_code())+60*60;
 		if(DateUtil.getDateline()>time){

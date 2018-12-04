@@ -58,4 +58,18 @@ public class RepairManager implements IRepairManager {
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, status);
         return page;
     }
+
+    @Override
+    public Page getRepairByPayStatus(Integer member_id, Integer payment_status, int pageNo, int pageSize) {
+        String sql = "select * from es_repair where member_id = ? and payment_status = ?";
+        Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, payment_status);
+        return page;
+    }
+
+    @Override
+    public Page getRepairByCommentStatus(Integer member_id, Integer comment_status, int pageNo, int pageSize) {
+        String sql = "select * from es_repair where member_id = ? and comment_status = ?";
+        Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, comment_status);
+        return page;
+    }
 }

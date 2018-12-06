@@ -40,35 +40,39 @@ public class RepairManager implements IRepairManager {
 
     @Override
     public Repair getRepair(Integer repair_id) {
-        String sql = "select * from es_repair where id = ?";
+        String sql = "select * from es_repair category_id = repaircat_id and where id = ?";
         Repair repair = this.daoSupport.queryForObject(sql, Repair.class, repair_id);
         return repair;
     }
 
     @Override
     public Page getRepairByMemberID(Integer member_id,int pageNo, int pageSize) {
-        String sql = "select * from es_repair where member_id = ?";
+        String sql = "select * from es_repair, es_repaircat where category_id = repaircat_id and member_id = ? " +
+                "order by update_date desc";
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize, Repair.class, member_id);
         return page;
     }
 
     @Override
     public Page getRepairByMemberIDStatus(Integer member_id, Integer status,int pageNo, int pageSize) {
-        String sql = "select * from es_repair where member_id = ? and status = ?";
+        String sql = "select * from es_repair where category_id = repaircat_id and member_id = ? and status = ? " +
+                "order by update_date desc";
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, status);
         return page;
     }
 
     @Override
     public Page getRepairByPayStatus(Integer member_id, Integer payment_status, int pageNo, int pageSize) {
-        String sql = "select * from es_repair where member_id = ? and payment_status = ?";
+        String sql = "select * from es_repair where category_id = repaircat_id and member_id = ? " +
+                "and payment_status = ? order by update_date desc";
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, payment_status);
         return page;
     }
 
     @Override
     public Page getRepairByCommentStatus(Integer member_id, Integer comment_status, int pageNo, int pageSize) {
-        String sql = "select * from es_repair where member_id = ? and comment_status = ?";
+        String sql = "select * from es_repair where category_id = repaircat_id and member_id = ? " +
+                "and comment_status = ? order by update_date desc";
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, member_id, comment_status);
         return page;
     }

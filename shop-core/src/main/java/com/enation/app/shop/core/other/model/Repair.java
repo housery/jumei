@@ -1,5 +1,6 @@
 package com.enation.app.shop.core.other.model;
 
+import com.enation.framework.database.NotDbField;
 import com.enation.framework.database.PrimaryKeyField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -16,7 +17,7 @@ public class Repair implements Serializable {
     private Integer repair_type;
 
     // 报修类目
-    private String category;
+    private int category_id;
 
     // 报修标题
     private String title;
@@ -54,6 +55,9 @@ public class Repair implements Serializable {
     // 维修评论状态
     private int comment_status;
 
+    // 维修分类
+    private String category;
+
     // 主键
     @PrimaryKeyField
     public Integer getId() {
@@ -72,12 +76,12 @@ public class Repair implements Serializable {
         this.repair_type = repair_type;
     }
 
-    public String getCategory() {
-        return category;
+    public int getCategory_id() {
+        return category_id;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
     }
 
     public String getTitle() {
@@ -152,6 +156,14 @@ public class Repair implements Serializable {
         this.paymoney = paymoney;
     }
 
+    public Double getPayment_status() {
+        return payment_status;
+    }
+
+    public void setPayment_status(Double payment_status) {
+        this.payment_status = payment_status;
+    }
+
     public Integer getMember_id() {
         return member_id;
     }
@@ -176,19 +188,20 @@ public class Repair implements Serializable {
         this.comment = comment;
     }
 
-    public Double getPayment_status() {
-        return payment_status;
-    }
-
-    public void setPayment_status(Double payment_status) {
-        this.payment_status = payment_status;
-    }
-
     public int getComment_status() {
         return comment_status;
     }
 
     public void setComment_status(int comment_status) {
         this.comment_status = comment_status;
+    }
+
+    @NotDbField
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

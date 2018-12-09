@@ -86,7 +86,7 @@ public class ActivityDetailManager implements IActivityDetailManager{
 		if(bounsList.size()==0){
 			detailMap.put("is_show_bonus", 0);
 		}else {
-			detailMap.put("is_show_bonus", 1);
+			detailMap.put("is_show_bonus", 1); 
 		}
 		List detailList=new ArrayList();
 		detailList.add(detailMap);

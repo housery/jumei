@@ -34,7 +34,7 @@ public class RepairManager implements IRepairManager {
 
     @Override
     public void deleteRepairByID(Integer repair_id) {
-        String sql = "delete from es_repair where id = ?";
+        String sql = "delete from es_property_community where community_id = ?";
         this.daoSupport.execute(sql, repair_id);
     }
 

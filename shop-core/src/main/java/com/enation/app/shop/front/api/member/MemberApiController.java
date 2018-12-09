@@ -1053,7 +1053,7 @@ public class MemberApiController  {
 
 	/**
 	 * 校验验证码
-	 * 
+	 *
 	 * @param validcode
 	 * @param name (1、memberlogin:会员登录  2、memberreg:会员注册 3、membervalid:会员手机验证)
 	 * @return 1成功 0失败
@@ -1075,7 +1075,22 @@ public class MemberApiController  {
 		return 1;
 	}
 
+	/**
+	 * 返回给前台当前登陆会员
+	 * @return
+	 */
+	@RequestMapping("/getCurrentMember")
+	@ResponseBody
+	public JsonResult getCurrentMember(){
+		Member member = null;
+		try {
+			member = UserConext.getCurrentMember();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return JsonResultUtil.getErrorJson("获取当前登陆会员出错");
+		}
+		return JsonResultUtil.getObjectJson(member);
+	}
 
-	//
-	
+
 }

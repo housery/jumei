@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdcc247d-f072-4a6d-a965-9262f7f0eb4d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repaircat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepaircatManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepaircatManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javashop-parent.iws" beforeDir="false" afterPath="$PROJECT_DIR$/javashop-parent.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/groupbuy/target/" />
     <ignored path="$PROJECT_DIR$/weixin/target/" />
@@ -66,6 +64,13 @@
         <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="es_repair: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="b2c@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="b2c: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="es_repaircat: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -79,11 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RepaircatController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RepaircatController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state relative-caret-position="396">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,20 +96,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepairController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java">
+      <file leaf-file-name="RepairManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="194" column="42" lean-forward="true" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
+            <state relative-caret-position="445">
+              <caret line="82" column="93" lean-forward="true" selection-start-line="82" selection-start-column="93" selection-end-line="82" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="es_repair" pinned="false" current-in-tab="false">
-        <entry file="das://23cf5934-97d1-4af0-bdf0-55a7eb808902/schema/b2c/table/es_repair">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/action/GoodsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-792">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageFrontController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MessageFrontController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1365">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepairController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -131,8 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selected_cat</find>
-      <find>regtime</find>
       <find>logout</find>
       <find>系统消息</find>
       <find>short-msg</find>
@@ -161,6 +182,8 @@
       <find>/api/shop</find>
       <find>vali-register-sms-code</find>
       <find>shiro</find>
+      <find>getRepairByStatus</find>
+      <find>select * from es_repair category_id = repaircat_id and where id = ?</find>
     </findStrings>
     <replaceStrings>
       <replace>Integer</replace>
@@ -178,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java" />
         <option value="$PROJECT_DIR$/b2c/src/main/webapp/themes/wap/common/float_footer.html" />
         <option value="$PROJECT_DIR$/b2c/src/main/test/MessageFrontControllerTest.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MessageFrontController.java" />
@@ -199,7 +221,6 @@
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/model/PropertyCommunity.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/model/PropertyDoornum.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/model/PropertyUnit.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/service/IPropertyCommunity.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/service/impl/PropertyCommunityManager.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/service/IPropertyUnit.java" />
@@ -223,12 +244,14 @@
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repaircat.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepaircat.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepaircatManager.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/23cf5934-97d1-4af0-bdf0-55a7eb808902/console.sql" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepaircatManager.java" />
-        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java" />
         <option value="$PROJECT_DIR$/b2c/src/main/resources/spring_cfg/filter-chain-definitions.properties" />
+        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java" />
         <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java" />
+        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java" />
+        <option value="$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/23cf5934-97d1-4af0-bdf0-55a7eb808902/console.sql" />
       </list>
     </option>
   </component>
@@ -370,7 +393,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +428,18 @@
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="other" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javashop" type="462c0819:PsiDirectoryNode" />
+              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,87 +454,6 @@
               <item name="other" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="property" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="property" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="property" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="property" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="javashop-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="javashop" type="462c0819:PsiDirectoryNode" />
-              <item name="shop-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="member" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -716,7 +670,7 @@
       <deployment>
         <artifact name="b2c:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -880,7 +834,7 @@
       <workItem from="1544191778054" duration="3717000" />
       <workItem from="1544249549732" duration="15278000" />
       <workItem from="1544330863466" duration="18592000" />
-      <workItem from="1544404924805" duration="4646000" />
+      <workItem from="1544404924805" duration="19148000" />
     </task>
     <task id="LOCAL-00001" summary="修改添加相关登陆注册接口">
       <created>1543315060064</created>
@@ -910,7 +864,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544353980646</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改维修接口">
+      <created>1544410757212</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544410757212</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -946,7 +907,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230945000" />
+    <option name="totallyTimeSpent" value="245447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -971,11 +932,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.24863686" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.24863686" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.3293348" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.25408942" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.496112" visible="true" weight="0.22068231" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496112" visible="true" weight="0.22068231" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32942432" />
       <window_info id="Web" order="6" sideWeight="0.5088161" side_tool="true" weight="0.22087745" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
@@ -1028,7 +989,8 @@
     <MESSAGE value="添加消息接口" />
     <MESSAGE value="添加4张物业表" />
     <MESSAGE value="添加物业缴费接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加物业缴费接口" />
+    <MESSAGE value="修改维修接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改维修接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1042,34 +1004,6 @@
     <option name="whitePaths" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://23cf5934-97d1-4af0-bdf0-55a7eb808902/schema/b2c/table/es_property_payment_record">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/property/service/IPropertyPayRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/impl/AdvanceLogsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/impl/CommentsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/impl/FavoriteManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1126,13 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MessageFrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-990">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/front/api/member/SmsApiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-648">
@@ -1140,24 +1067,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/CommentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/impl/MemberManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-864">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MemberController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="716" column="5" selection-start-line="716" selection-start-column="5" selection-end-line="716" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1273,38 +1186,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://23cf5934-97d1-4af0-bdf0-55a7eb808902/schema/b2c/table/es_repaircat">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repaircat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/23cf5934-97d1-4af0-bdf0-55a7eb808902/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+          <folding>
+            <element signature="e#136#137#0" expanded="true" />
+            <element signature="e#164#165#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,6 +1201,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1319,6 +1213,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,17 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="160" column="45" lean-forward="true" selection-start-line="160" selection-start-column="45" selection-end-line="160" selection-end-column="45" />
-          <folding>
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3186#3187#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1376,6 +1262,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/CommentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1836">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/goods/action/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4891">
+          <caret line="716" column="5" selection-start-line="716" selection-start-column="5" selection-end-line="716" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/impl/MessageBgManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/service/IMessageBgManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MessageBgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/member/action/MessageFrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1365">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/IRepairManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/model/Repair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="204" column="33" lean-forward="true" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+          <folding>
+            <element signature="e#3897#3898#0" expanded="true" />
+            <element signature="e#3928#3929#0" expanded="true" />
+            <element signature="e#3976#3977#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://23cf5934-97d1-4af0-bdf0-55a7eb808902/schema/b2c/table/es_repaircat">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://23cf5934-97d1-4af0-bdf0-55a7eb808902/schema/b2c/table/es_repair">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1383,20 +1362,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepairController.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/23cf5934-97d1-4af0-bdf0-55a7eb808902/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="194" column="42" lean-forward="true" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
+        <state relative-caret-position="542">
+          <caret line="119" selection-start-line="119" selection-end-line="119" selection-end-column="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/controller/RepaircatController.java">
+    <entry file="file://$PROJECT_DIR$/shop-core/src/main/java/com/enation/app/shop/core/other/service/impl/RepairManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="445">
+          <caret line="82" column="93" lean-forward="true" selection-start-line="82" selection-start-column="93" selection-end-line="82" selection-end-column="93" />
         </state>
       </provider>
     </entry>

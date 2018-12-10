@@ -55,6 +55,9 @@ public class Repair implements Serializable {
     // 维修评论状态
     private int comment_status;
 
+    // 维修分类名
+    private String category;
+
     // 主键
     @PrimaryKeyField
     public Integer getId() {
@@ -193,4 +196,12 @@ public class Repair implements Serializable {
         this.comment_status = comment_status;
     }
 
+    @NotDbField
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }

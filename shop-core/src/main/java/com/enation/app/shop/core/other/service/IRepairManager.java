@@ -71,4 +71,14 @@ public interface IRepairManager {
      * @return
      */
     public Page getRepairByCommentStatus(Integer member_id, Integer comment_status, int pageNo, int pageSize);
+
+    /**
+     * 后台管理员根据维修状态获取维修订单
+     * @param status 维修状态
+     * @param pageNo 起始页
+     * @param pageSize 页大小
+     * @return
+     */
+    public Page getRepairListByStatus(Integer status, int pageNo, int pageSize);
+
 }

@@ -31,7 +31,7 @@ public class RepaircatController {
      * @param repaircat 分类对象
      * @return
      */
-    @RequestMapping(value = "/addPrepairCat",method = RequestMethod.POST)
+    @RequestMapping(value = "/addRepairCat",method = RequestMethod.POST)
     public JsonResult addPrepairCat(Repaircat repaircat) {
         try {
             repaircatManager.addPrepairCat(repaircat);

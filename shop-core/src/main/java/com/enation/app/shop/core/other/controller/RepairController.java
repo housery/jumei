@@ -9,27 +9,14 @@ import com.enation.eop.sdk.context.UserConext;
 import com.enation.framework.action.GridController;
 import com.enation.framework.action.GridJsonResult;
 import com.enation.framework.action.JsonResult;
-import com.enation.framework.context.webcontext.ThreadContextHolder;
 import com.enation.framework.database.Page;
-import com.enation.framework.util.FileUtil;
 import com.enation.framework.util.JsonMessageUtil;
 import com.enation.framework.util.JsonResultUtil;
 import com.enation.framework.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpSession;
-import java.io.InputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author: xiaohoo
@@ -44,12 +31,12 @@ public class RepairController extends GridController {
     private RepairManager repairManager;
 
     /**
-     * 根据订单处理状态获取维修订单
+     * 根据维修状态获取当前会员的维修列表
      * @param status 状态
      * @return json格式列表
      */
     @ResponseBody
-    @RequestMapping(value = "/getRepairByStatus",produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/getCurrMemberRepairByStatus",produces = MediaType.APPLICATION_JSON_VALUE)
     public GridJsonResult getRepairByMemberIdStatus(int status){
         Page repairList = null;
         try {
@@ -249,4 +236,30 @@ public class RepairController extends GridController {
         }
         return JsonResultUtil.getGridJson(repairList);
     }
+
+    /**
+     * 后台管理员根据维修状态获取维修列表
+     * @param status 当前维修状态
+     *               1 订单待处理，2 客服已确认订单，
+     *               3 客服已经派出相关服务人员，4 维修服务完成
+     * @param page 起始页
+     * @param length 页大小
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/getAllRepairListByStatus")
+    public GridJsonResult getRepairListByStatus(Integer status) {
+        Page repairList = null;
+        try {
+            repairList = repairManager.getRepairListByStatus(status, this.getPage(), this.getPageSize());
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("后台管理员根据维修状态获取维修列表出现错误");
+        }
+        return JsonResultUtil.getGridJson(repairList);
+    }
+
+    /**
+     * 后台获取用户提交的维修订单
+     */
 }

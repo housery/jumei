@@ -41,7 +41,7 @@ public class Repair implements Serializable {
     private Double paymoney;
 
     // 支付状态
-    private Double payment_status;
+    private int payment_status;
 
     // 会员id
     private Integer member_id;
@@ -54,9 +54,6 @@ public class Repair implements Serializable {
 
     // 维修评论状态
     private int comment_status;
-
-    // 维修分类
-    private String category;
 
     // 主键
     @PrimaryKeyField
@@ -156,11 +153,11 @@ public class Repair implements Serializable {
         this.paymoney = paymoney;
     }
 
-    public Double getPayment_status() {
+    public int getPayment_status() {
         return payment_status;
     }
 
-    public void setPayment_status(Double payment_status) {
+    public void setPayment_status(int payment_status) {
         this.payment_status = payment_status;
     }
 
@@ -196,12 +193,4 @@ public class Repair implements Serializable {
         this.comment_status = comment_status;
     }
 
-    @NotDbField
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }

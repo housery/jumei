@@ -37,7 +37,7 @@ import java.util.List;
  * @email: 1126457667@qq.com
  */
 @Controller
-@RequestMapping("/repair")
+@RequestMapping("/api/shop/repair")
 public class RepairController extends GridController {
 
     @Autowired
@@ -203,6 +203,7 @@ public class RepairController extends GridController {
             repair.setUpdate_date(System.currentTimeMillis());
             repair.setStatus(1);
             repair.setMember_id(member.getMember_id());
+            repair.setPayment_status(0); // 设置支付状态为0 未支付
             repairManager.addRepair(repair);
             return JsonResultUtil.getSuccessJson("添加维修订单成功");
         } catch (Exception e) {

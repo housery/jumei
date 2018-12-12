@@ -1,6 +1,7 @@
 package com.enation.app.shop.core.other.controller;
 
 import com.enation.app.shop.core.other.model.Repaircat;
+import com.enation.app.shop.core.other.service.impl.Repaircat2Manager;
 import com.enation.app.shop.core.other.service.impl.RepaircatManager;
 import com.enation.framework.action.GridJsonResult;
 import com.enation.framework.action.JsonResult;
@@ -24,6 +25,8 @@ public class RepaircatController {
 
     @Autowired
     private RepaircatManager repaircatManager;
+    @Autowired
+    private Repaircat2Manager repaircat2Manager;
     private Logger logger = Logger.getLogger(RepaircatController.class);
 
     /**
@@ -50,6 +53,9 @@ public class RepaircatController {
     @RequestMapping("/deleteRepairCat")
     public JsonResult deleteRepairCat(Integer repaircat_id) {
         try {
+            if (repaircat2Manager.getRepaircat2ListByCat1Id(repaircat_id) != null){
+                return JsonResultUtil.getErrorJson("该一级维修分类下含有二级分类，无法删除");
+            }
             repaircatManager.deleteRepairCat(repaircat_id);
         } catch (Exception e) {
             e.printStackTrace();

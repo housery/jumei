@@ -175,6 +175,7 @@
         <module name="groupbuy" />
         <module name="shop-core" />
         <module name="themes" />
+        <module name="weixin" />
         <module name="weixin-applet" />
         <module name="zt-sms" />
       </profile>
@@ -319,6 +320,7 @@
       <list>
         <option value="$PROJECT_DIR$/../../../shop_b2c_weixin/javashop-b2c-weixin-applet/themes/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/weixin/pom.xml" />
       </list>
     </option>
   </component>
@@ -451,6 +453,7 @@
       <module fileurl="file://$PROJECT_DIR$/groupbuy/groupbuy.iml" filepath="$PROJECT_DIR$/groupbuy/groupbuy.iml" />
       <module fileurl="file://$PROJECT_DIR$/javashop-parent.iml" filepath="$PROJECT_DIR$/javashop-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-core/shop-core.iml" filepath="$PROJECT_DIR$/shop-core/shop-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weixin/weixin.iml" filepath="$PROJECT_DIR$/weixin/weixin.iml" />
       <module fileurl="file://$PROJECT_DIR$/weixin-applet/weixin-applet.iml" filepath="$PROJECT_DIR$/weixin-applet/weixin-applet.iml" />
       <module fileurl="file://$PROJECT_DIR$/zt-sms/zt-sms.iml" filepath="$PROJECT_DIR$/zt-sms/zt-sms.iml" />
     </modules>

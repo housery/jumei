@@ -16,8 +16,10 @@ public class Repair implements Serializable {
     // 维修类型 1公共维修，2私人报修
     private Integer repair_type;
 
-    // 报修类目
+    // 一级报修类目id
     private int category_id;
+    // 二级报修类目id
+    private int category2_id;
 
     // 报修标题
     private String title;
@@ -203,5 +205,13 @@ public class Repair implements Serializable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public int getCategory2_id() {
+        return category2_id;
+    }
+
+    public void setCategory2_id(int category2_id) {
+        this.category2_id = category2_id;
     }
 }

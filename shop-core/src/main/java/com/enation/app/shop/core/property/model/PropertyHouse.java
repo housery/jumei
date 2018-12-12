@@ -1,5 +1,6 @@
 package com.enation.app.shop.core.property.model;
 
+import com.enation.framework.database.NotDbField;
 import com.enation.framework.database.PrimaryKeyField;
 
 public class PropertyHouse {
@@ -9,10 +10,12 @@ public class PropertyHouse {
     private long unit_id;
     private long doornum_id;
     private long create_date;
-    private double property_charges;
+    private double property_charges; // 物业费，按年计算，年费=house_area * monthly_fee * 12
     private String community_name;
     private String unit_name;
     private String doornum;
+    private double house_area; //房屋面积
+    private long monthly_fee; // 物业费的月费标准
 
     @PrimaryKeyField
     public long getHouse_id() {
@@ -55,6 +58,7 @@ public class PropertyHouse {
         this.create_date = create_date;
     }
 
+    @NotDbField
     public double getProperty_charges() {
         return property_charges;
     }
@@ -85,5 +89,21 @@ public class PropertyHouse {
 
     public void setDoornum(String doornum) {
         this.doornum = doornum;
+    }
+
+    public double getHouse_area() {
+        return house_area;
+    }
+
+    public void setHouse_area(double house_area) {
+        this.house_area = house_area;
+    }
+
+    public long getMonthly_fee() {
+        return monthly_fee;
+    }
+
+    public void setMonthly_fee(long monthly_fee) {
+        this.monthly_fee = monthly_fee;
     }
 }

@@ -15,7 +15,6 @@ import java.util.List;
  * @email: 1126457667@qq.com
  */
 @Service
-@Transactional
 public class PropertyHouseManager implements IPropertyHouse {
 
     @Autowired

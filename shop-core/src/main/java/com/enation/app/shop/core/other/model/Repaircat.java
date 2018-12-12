@@ -2,18 +2,16 @@ package com.enation.app.shop.core.other.model;
 
 public class Repaircat {
 
-  private long repaircatId;
+  private long repaircat_id;
   private String category;
 
-
-  public long getRepaircatId() {
-    return repaircatId;
+  public long getRepaircat_id() {
+    return repaircat_id;
   }
 
-  public void setRepaircatId(long repaircatId) {
-    this.repaircatId = repaircatId;
+  public void setRepaircat_id(long repaircat_id) {
+    this.repaircat_id = repaircat_id;
   }
-
 
   public String getCategory() {
     return category;

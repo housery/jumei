@@ -6,6 +6,7 @@ import com.enation.app.shop.core.property.service.impl.PropertyPayRecordManager;
 import com.enation.framework.action.JsonResult;
 import com.enation.framework.util.JsonResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/shop/property/house")
+@Transactional
 public class HouseController {
 
     @Autowired
@@ -35,6 +37,8 @@ public class HouseController {
     public JsonResult addHouse(PropertyHouse house){
         try {
             house.setCreate_date(System.currentTimeMillis());
+            double charges = house.getHouse_area() * house.getMonthly_fee();
+            house.setProperty_charges(charges);
             houseManager.add(house);
         } catch (Exception e) {
             e.printStackTrace();

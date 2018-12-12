@@ -37,9 +37,7 @@ public class ReceiptContentManager implements IReceiptContentManager{
 
 	@Override
 	public ReceiptContent saveAdd(ReceiptContent receiptContent) {
-		
 		this.daoSupport.insert("es_receipt_content", receiptContent);
-		
 		return receiptContent;
 	}
 

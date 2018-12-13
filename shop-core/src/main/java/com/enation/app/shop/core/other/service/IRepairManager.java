@@ -81,4 +81,30 @@ public interface IRepairManager {
      */
     public Page getRepairListByStatus(Integer status, int pageNo, int pageSize);
 
+    /**
+     * 添加评论
+     * @param id 维修id
+     */
+    public void addComment(Integer id, String comment);
+
+    /**
+     * 获取维修状态
+     * @param repairId 维修id
+     * @param member_id 会员id
+     * @return 返回维修状态
+     */
+    public int getReairStatus(Integer repairId, Integer member_id);
+
+    /**
+     * 修改维修订单为支付状态
+     * @param repairId 订单id
+     */
+    public void changePayStatus(Integer repairId);
+
+    /**
+     * 修改维修订单的状态
+     * @param repairId
+     * @param status
+     */
+    public void changeRepairStatus(Integer repairId, Integer status);
 }

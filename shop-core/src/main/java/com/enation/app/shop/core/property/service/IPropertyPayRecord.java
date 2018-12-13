@@ -22,4 +22,19 @@ public interface IPropertyPayRecord {
     public PropertyPaymentRecord getPayRecordById(Integer payRecordId);
 
     public List<PropertyPaymentRecord> getPayRecordListByHouseId(Integer houseId);
+
+    /**
+     * 获取物业缴费记录
+     * @param houseId 房屋id
+     * @param pay_status 支付状态
+     * @return 订单列表
+     */
+    public List<PropertyPaymentRecord> getPayRecordListByHouseIdPayStatus(Integer houseId,Integer pay_status);
+
+    /**
+     * 缴费，根据订单id设置订单的支付状态为1
+     * @param recordIdList 未缴费的订单id列表
+     */
+    public void payProperty(List<Integer> recordIdList);
+
 }

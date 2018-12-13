@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: xiaohoo
@@ -47,8 +49,28 @@ public class PropertyPayRecordManager implements IPropertyPayRecord {
 
     @Override
     public List<PropertyPaymentRecord> getPayRecordListByHouseId(Integer houseId) {
-        String sql = "";
+        String sql = "select * from es_property_payment_record where house_id = ?";
         List<PropertyPaymentRecord> recordList = this.daoSupport.queryForList(sql,PropertyPaymentRecord.class,houseId);
         return recordList;
+    }
+
+    @Override
+    public List<PropertyPaymentRecord> getPayRecordListByHouseIdPayStatus(Integer houseId, Integer pay_status) {
+        String sql = "select * from es_property_payment_record where house_id = ? and pay_status = ?";
+        List<PropertyPaymentRecord> recordList = this.daoSupport.queryForList(sql,PropertyPaymentRecord.class,houseId,pay_status);
+        return recordList;
+    }
+
+    /**
+     * 修改支付订单未支付状态
+     * @param recordIdList 未缴费的id列表
+     */
+    @Override
+    public void payProperty(List<Integer> recordIdList) {
+        Map filed = new HashMap();
+        filed.put("pay_status",1);  //设置为支付状态
+        for (Integer recordId: recordIdList) {
+            this.daoSupport.update("es_property_payment_record", filed, "payment_record_id = " + recordId);
+        }
     }
 }

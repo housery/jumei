@@ -121,7 +121,7 @@ public class RepairController extends GridController {
     /**
      * 编辑维修订单，只允许客户修改订单
      * 默认设置更新时间，设置状态为待处理1,
-     * @param repair
+     * @param repair 必须包含id才能编辑
      * @param imgPath1
      * @param imgPath2
      * @param imgPath3
@@ -260,6 +260,58 @@ public class RepairController extends GridController {
     }
 
     /**
-     * 后台获取用户提交的维修订单
+     * 添加评论
+     * @param id 维修id
+     * @param comment 评论内容
+     * @return
      */
+    @ResponseBody
+    @RequestMapping(value = "/addComment")
+    public JsonResult addComment(Integer id, String comment){
+        try {
+            repairManager.addComment(id,comment);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return JsonResultUtil.getErrorJson("添加评论失败");
+        }
+        return JsonResultUtil.getSuccessJson("添加评论成功");
+    }
+
+    /**
+     * 根据登陆会员，维修订单id获取维修状态
+     * @param repairId 维修id
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/getReairStatus")
+    public JsonResult getReairStatus(Integer repairId){
+        int status = 0;
+        try {
+            Member member = UserConext.getCurrentMember();
+            int member_id = member.getMember_id();
+            status = repairManager.getReairStatus(repairId,member_id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return JsonResultUtil.getErrorJson("获取出错");
+        }
+        return JsonResultUtil.getObjectJson(status);
+    }
+
+    /**
+     * 修改订单的维修状态
+     * @param repairId
+     * @param status
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/changeRepairStatus",method = RequestMethod.POST)
+    public JsonResult changeRepairStatus(Integer repairId, Integer status){
+        try {
+            repairManager.changeRepairStatus(repairId,status);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return JsonResultUtil.getErrorJson("修改订单维修状态失败");
+        }
+        return JsonResultUtil.getSuccessJson("修改订单维修状态成功");
+    }
 }

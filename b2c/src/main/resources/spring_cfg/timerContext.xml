@@ -8,44 +8,44 @@
         http://www.springframework.org/schema/context/spring-context.xsd" default-autowire="byName" default-lazy-init="false">
 
 	<bean id="jobExecuter" class="com.enation.app.base.core.service.impl.JobExecuter" />
-	<!-- 每天执行task -->		 
+	<!-- 每天执行task -->
 	<bean id="everyDayTask"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		 
+
 		<property name="targetObject">
 			<ref bean="jobExecuter" />
 		</property>
-		 
+
 		<property name="targetMethod">
 			<value>everyDay</value>
 		</property>
 	</bean>
-	
-	<!-- 每小时执行task -->	
+
+	<!-- 每小时执行task -->
 	<bean id="erverHourTask"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		 
+
 		<property name="targetObject">
 			<ref bean="jobExecuter" />
 		</property>
-		 
+
 		<property name="targetMethod">
 			<value>everyHour</value>
 		</property>
 	</bean>
-	<!-- 每月执行task -->		 
+	<!-- 每月执行task -->
 	<bean id="everyMonthTask"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-		 
+
 		<property name="targetObject">
 			<ref bean="jobExecuter" />
 		</property>
-		 
+
 		<property name="targetMethod">
 			<value>everyMonth</value>
 		</property>
 	</bean>
-	
+
 
 	<!-- 每天执行表达式，每晚23：30 -->
 	<bean id="erverDayTime"
@@ -53,38 +53,38 @@
 		<property name="jobDetail">
 			<ref bean="everyDayTask" />
 		</property>
-		 
+
 		<property name="cronExpression">
 			<value>0 30 23 * * ?</value>
 		</property>
 	</bean>
-	
+
 	<!--  每小时执行表达式 -->
 	<bean id="erverHourTime"
 		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail">
 			<ref bean="erverHourTask" />
 		</property>
-		 
+
 		<property name="cronExpression">
 			<value>0 0 0/1 * * ?</value>
 		</property>
-		 
+
 	</bean>
-	
+
 	<!--  每月执行表达式 -->
 	<bean id="everyMonthTime"
 		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail">
 			<ref bean="everyMonthTask" />
 		</property>
-		 
+
 		<property name="cronExpression">
 			<value>0 10 0 1 * ?</value>
 		</property>
 	</bean>
-	
-	
+
+
 	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序   -->
 	<bean id="startQuertz" lazy-init="false" autowire="no"
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">

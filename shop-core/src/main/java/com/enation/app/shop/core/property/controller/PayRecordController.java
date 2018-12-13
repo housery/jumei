@@ -109,4 +109,22 @@ public class PayRecordController {
         }
         return JsonResultUtil.getGridJson(paymentRecordList);
     }
+
+    /**
+     * 获取房屋缴费记录通过房屋id，和支付状态
+     * @param houseId 房屋id
+     * @param pay_status 支付状态
+     * @return 支付列表
+     */
+    @RequestMapping("/getPayRecordListByHouseIdPayStatus")
+    public GridJsonResult getPayRecordListByHouseIdPayStatus(Integer houseId, Integer pay_status){
+        List<PropertyPaymentRecord> recordList = null;
+        try {
+            recordList = payRecordManager.getPayRecordListByHouseIdPayStatus(houseId,pay_status);
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("获取房屋缴费记录失败" + e.getMessage());
+        }
+        return JsonResultUtil.getGridJson(recordList);
+    }
 }

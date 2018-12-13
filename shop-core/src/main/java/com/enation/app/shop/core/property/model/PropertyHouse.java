@@ -15,7 +15,7 @@ public class PropertyHouse {
     private String unit_name;
     private String doornum;
     private double house_area; //房屋面积
-    private long monthly_fee; // 物业费的月费标准
+    private double monthly_fee; // 物业费的月费标准
 
     @PrimaryKeyField
     public long getHouse_id() {
@@ -99,11 +99,11 @@ public class PropertyHouse {
         this.house_area = house_area;
     }
 
-    public long getMonthly_fee() {
+    public double getMonthly_fee() {
         return monthly_fee;
     }
 
-    public void setMonthly_fee(long monthly_fee) {
+    public void setMonthly_fee(double monthly_fee) {
         this.monthly_fee = monthly_fee;
     }
 }

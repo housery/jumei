@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: xiaohoo
@@ -29,6 +31,7 @@ public class RepairManager implements IRepairManager {
 
     @Override
     public void editRepair(Repair repair) {
+
         this.daoSupport.update("es_repair", repair, "id="+repair.getId());
     }
 
@@ -82,5 +85,34 @@ public class RepairManager implements IRepairManager {
         String sql = "select * from es_repair, es_repaircat where category_id = repaircat_id and status = ?";
         Page page = this.daoSupport.queryForPage(sql, pageNo, pageSize,Repair.class, status);
         return page;
+    }
+
+    @Override
+    public void addComment(Integer id, String comment) {
+        Map field = new HashMap();
+        field.put("comment",comment);
+        field.put("comment_status",1);  // 设置评论状态为1，已经评论
+        this.daoSupport.update("es_repair",field,"id = " + id);
+    }
+
+    @Override
+    public int getReairStatus(Integer repairId, Integer member_id) {
+        String sql = "select status from es_repair where id = ? and member_id = ?";
+        int status = this.daoSupport.queryForInt(sql,repairId, member_id);
+        return status;
+    }
+
+    @Override
+    public void changePayStatus(Integer repairId) {
+        Map filed = new HashMap();
+        filed.put("payment_status",1);  //设置维修订单为支付状态
+        this.daoSupport.update("es_repair", filed, "id = " + repairId);
+    }
+
+    @Override
+    public void changeRepairStatus(Integer repairId, Integer status) {
+        Map filed = new HashMap();
+        filed.put("status",status);  //设置维修订单为支付状态
+        this.daoSupport.update("es_repair", filed, "id = " + repairId);
     }
 }

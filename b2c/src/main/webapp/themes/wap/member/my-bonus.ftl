@@ -1,5 +1,5 @@
 <#assign  title="我的优惠券" />
-<#include '/common/header.html' />
+<#include '../common/header.ftl' />
 <#assign memberLoginCheckTag = newTag("memberLoginCheckTag") />
 <#assign memberInfo = memberLoginCheckTag() />
 <#if member??>

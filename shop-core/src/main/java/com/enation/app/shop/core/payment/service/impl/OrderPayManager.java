@@ -11,6 +11,7 @@ import com.enation.app.shop.core.payment.model.po.PaymentBill;
 import com.enation.app.shop.core.payment.model.po.PaymentMethod;
 import com.enation.app.shop.core.payment.service.IPaymentBillManager;
 import com.enation.app.shop.core.payment.service.IPaymentMethodManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -43,6 +44,8 @@ public class OrderPayManager implements IOrderPayManager {
 
 	@Autowired
 	private IPaymentMethodManager paymentMethodManager;
+
+	private Logger logger = Logger.getLogger(OrderPayManager.class);
 
 //
 //	@Autowired
@@ -87,6 +90,8 @@ public class OrderPayManager implements IOrderPayManager {
 		map.put("payment_method_id", paymentMethod.getMethod_id());
 		map.put("payment_plugin_id", paymentMethod.getPlugin_id()); //支付插件id
 		map.put("payment_method_name", paymentMethod.getMethod_name()); //支付方式名称
+		logger.info("支付参数：payment_method_id:" + paymentMethod.getMethod_id() + " "
+                + paymentMethod.getPlugin_id() + " " + paymentMethod.getMethod_name());
 
 		this.daoSupport.update("es_order", map, "sn = " + paymentStream.getSn());
 		bill.setOrder_sn(sn);
